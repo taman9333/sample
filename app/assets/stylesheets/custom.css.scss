@@ -1,2 +1,72 @@
-@import "bootstrap-sprockets";
-@import "bootstrap";
+$navbar-default-bg: #000;
+
+@import 'bootstrap-sprockets';
+@import 'bootstrap';
+
+#logo {
+  float: left;
+  font-size: 1.7em;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  font-weight: bold;
+}
+
+.center {
+  text-align: center;
+}
+
+.jumbotron-photo{
+  background-image: asset-url('Blog_About-Ruby2');
+  background-size: cover;
+  height: 600px;
+}
+
+.jumbotron-photo h1 {
+  color: #fff;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.jumbotron-photo button a {
+  color: #fff;
+}
+.jumbotron-photo button a:hover {
+  text-decoration: none;
+}
+
+.jumbotron-photo button:nth-of-type(1){
+  margin-right: 100px;
+}
+
+footer{
+  // position: fixed;
+  // bottom: 0;
+  margin-top: 45px;
+  padding-top: 5px;
+  border-top: 1px solid #eaeaea;
+  color: #777;
+}
+
+footer a:hover{
+  color: #222;
+}
+
+footer small{
+  float: left;
+}
+
+footer ul{
+  float: right;
+  list-style: none;
+}
+
+footer ul li{
+  float: left;
+  margin-left: 15px;
+}
+
+.form-horizontal .control-label{
+  text-align: center;
+}
+

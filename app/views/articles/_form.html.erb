@@ -1,11 +1,4 @@
-<% if @article.errors.any? %>
-<h2>These are errors that can't make article to be created</h2>
-<ul>
-  <% @article.errors.full_messages.each do |msg| %>
-    <li> <%= msg%> </li>
-  <% end %>
-</ul>
-<% end %>
+<%= render 'shared/errors', obj: @article %>
 <%= form_for @article, html: {class: "form-horizontal", role: 'form'} do |f| %>
   <div class='row'>
     <div class='col-sm-12'>

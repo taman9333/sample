@@ -12,6 +12,8 @@ class User < ApplicationRecord
             uniqueness: { case_sensitive: false },
             format: { with: /\A[^@\s]+@([^@\s]+\.)+[^@\s]+\z/ }
 
+  validates :password, length: { minimum: 6 }
+
   def downcase_email
     self.email = email.downcase
   end

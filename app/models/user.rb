@@ -1,6 +1,8 @@
 class User < ApplicationRecord
 
-  befoer_save :downcase_email
+  has_many :articles, dependent: :destroy
+
+  before_save :downcase_email
 
   validates :username, presence: true,
             uniqueness: { case_sensitive: false }, length: { minimum: 3, maximum: 25 }
@@ -9,7 +11,7 @@ class User < ApplicationRecord
             format: { with: /\A[^@\s]+@([^@\s]+\.)+[^@\s]+\z/ }
 
   def downcase_email
-    email = email.downcase
+    self.email = email.downcase
   end
 
 end

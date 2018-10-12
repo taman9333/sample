@@ -6,4 +6,8 @@ module ApplicationHelper
     image_tag gravatar_url, alt: user.username, class: 'img-circle'
   end
 
+  def article_authorization(article_user)
+    logged_in? && current_user == article_user
+  end
+
 end

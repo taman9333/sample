@@ -35,8 +35,8 @@ $navbar-default-bg: #000;
   text-decoration: none;
 }
 
-.jumbotron-photo button:nth-of-type(1){
-  margin-right: 100px;
+.jumbotron-photo button:nth-of-type(even){
+  margin: 0 100px;
 }
 
 footer{
